@@ -29,9 +29,8 @@ timer_invencivel = 0;
 #endregion
 
 #region
-//Sistema de movimentação do jogador
-//Metodo para controlar o player
 
+//Metodo para controlar o player
 controla_player = function()
 {
 	//Diminuindo o timer invencivel
@@ -59,6 +58,9 @@ controla_player = function()
 	
 	//Impedindo que o jogador saia por cima e baixo
 	y = clamp(y, 19, room_height - 19);
+	
+	//Caso utilize o escudo
+	com_escudo();
 	
 	//Diminuindo o timer do tiro
 	timer_tiro--;
@@ -171,6 +173,23 @@ usa_escudo = function()
 		
 		//Guardando o escudo criado
 		meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
+	}
+}
+
+//Metodo para controlar os escudos
+com_escudo = function()
+{
+	//Se existir a instancia do escudo ela segue o player
+	if(instance_exists(meu_escudo))
+	{
+		meu_escudo.x = x;
+		meu_escudo.y = y;
+		
+		timer_invencivel = 10;
+	}
+	else //Não existe instancia do escudo
+	{
+		meu_escudo = noone;
 	}
 }
 

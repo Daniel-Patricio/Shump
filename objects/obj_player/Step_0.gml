@@ -32,14 +32,3 @@ show_debug_message(timer_invencivel);
 
 //Controlando o player
 controla_player();
-
-//Se existir a instancia do escudo ela segue o player
-if(instance_exists(meu_escudo))
-{
-	meu_escudo.x = x;
-	meu_escudo.y = y;
-}
-else //Não existe instancia do escudo
-{
-	meu_escudo = noone;
-}

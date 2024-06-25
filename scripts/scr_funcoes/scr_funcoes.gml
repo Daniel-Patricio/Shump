@@ -5,3 +5,15 @@
 global.debug = false;
 
 #endregion
+
+#region funções
+
+function sendo_destruido(_particula = obj_part_tiro)
+{
+	instance_destroy();
+	
+	//Criando minha particula
+	instance_create_layer(x, y, "Particulas", _particula);
+}
+
+#endregion
