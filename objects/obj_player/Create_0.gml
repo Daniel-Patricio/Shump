@@ -19,6 +19,13 @@ vidas = 3;
 //Escudos
 escudos = 3;
 
+//Tenho escudo
+meu_escudo = noone;
+
+//Invencibilidade do player
+tempo_invencivel = game_get_speed(gamespeed_fps);
+timer_invencivel = 0;
+
 #endregion
 
 #region
@@ -27,6 +34,9 @@ escudos = 3;
 
 controla_player = function()
 {
+	//Diminuindo o timer invencivel
+	timer_invencivel--;
+	
 	//Pegando as teclas
 	var _cima, _baixo, _esq, _dire, _atirar;
 	_cima	= keyboard_check(ord("W")) or keyboard_check(vk_up);
@@ -104,7 +114,7 @@ tiro_3 = function()
 	tiro_2();
 }
 
-//Ganha level do tiro
+//Metodo de ganhar level do tiro
 ganha_lvl_tiro = function()
 {
 	//Ganha lvl e não passa do limite
@@ -114,7 +124,7 @@ ganha_lvl_tiro = function()
 	}
 }
 
-//Desenha o icone
+//Metodo de desenhar o icone
 desenha_icone = function(_icone = spr_icone_vida, _qtd = 1, _y = 20)
 {
 	//A altura da GUI e a altura normal varia por causa do viewport, então tem que usar esta função pra poder
@@ -128,6 +138,40 @@ desenha_icone = function(_icone = spr_icone_vida, _qtd = 1, _y = 20)
 		_espaco += 30;
 	}
 
+}
+
+//Metodo de perder vida
+perde_vida = function()
+{
+	//Só pode perder vida se não estiver invencível
+	if (timer_invencivel > 0) return;
+	
+	//Perdendo vida se ainda tem vida
+	if(vidas > 0)
+	{
+		vidas--;
+		
+		//Avisando que o tempo de invencibilidade ta valendo
+		timer_invencivel = tempo_invencivel;
+	}
+	else
+	{
+		instance_destroy();
+	}
+	
+}
+
+//Metodo para usar escudos
+usa_escudo = function()
+{
+	if(escudos > 0 && meu_escudo == noone)
+	{
+		//Decrementa o valor de escudos
+		escudos--;
+		
+		//Guardando o escudo criado
+		meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
+	}
 }
 
 #endregion
