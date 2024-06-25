@@ -13,6 +13,12 @@ timer_tiro = 0;
 //Level do tiro
 level_tiro = 1;
 
+//Vidas
+vidas = 3;
+
+//Escudos
+escudos = 3;
+
 #endregion
 
 #region
@@ -50,7 +56,19 @@ controla_player = function()
 	//Criar um tiro quando apertar a tecla e o timer ta zerado
 	if(_atirar && timer_tiro <= 0)
 	{
-		tiro_2();
+		//Checa o lvl do tiro
+		if(level_tiro == 1)
+		{
+			tiro_1();
+		}
+		else if(level_tiro == 2)
+		{
+			tiro_2();
+		}
+		else if(level_tiro == 3)
+		{
+			tiro_3();
+		}
 		
 		//O timer do tiro foi resetado
 		timer_tiro = espera_tiro;
@@ -76,6 +94,40 @@ tiro_2 = function()
 	_tiro.vspeed = -10;
 	_tiro = instance_create_layer(x + 10, y, "Tiros", obj_tiro_player);
 	_tiro.vspeed = -10;
+}
+
+//Metodo do tiro 3
+tiro_3 = function()
+{
+	//Criando 3 tiros
+	tiro_1();
+	tiro_2();
+}
+
+//Ganha level do tiro
+ganha_lvl_tiro = function()
+{
+	//Ganha lvl e não passa do limite
+	if(level_tiro < 3)
+	{
+		level_tiro++;
+	}
+}
+
+//Desenha o icone
+desenha_icone = function(_icone = spr_icone_vida, _qtd = 1, _y = 20)
+{
+	//A altura da GUI e a altura normal varia por causa do viewport, então tem que usar esta função pra poder
+	//desenhar na altura certa em baixo da room.
+	var _espaco = 0;
+
+	//Repeat: repete o trecho de código dentro dele X vezes
+	repeat(_qtd)
+	{
+		draw_sprite_ext(_icone, 0, 20 + _espaco, _y, 1, 1, 0, c_white, 0.5);
+		_espaco += 30;
+	}
+
 }
 
 #endregion
