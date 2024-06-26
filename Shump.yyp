@@ -50,6 +50,8 @@
     {"id":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
     {"id":{"name":"scr_funcoes","path":"scripts/scr_funcoes/scr_funcoes.yy",},},
+    {"id":{"name":"seq_onda1","path":"sequences/seq_onda1/seq_onda1.yy",},},
+    {"id":{"name":"seq_onda2","path":"sequences/seq_onda2/seq_onda2.yy",},},
     {"id":{"name":"spr_bg0","path":"sprites/spr_bg0/spr_bg0.yy",},},
     {"id":{"name":"spr_bg1","path":"sprites/spr_bg1/spr_bg1.yy",},},
     {"id":{"name":"spr_bg2","path":"sprites/spr_bg2/spr_bg2.yy",},},

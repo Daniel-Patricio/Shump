@@ -1,6 +1,9 @@
 //Chamando o alarme
 alarm[0] = 120;
 
+//Descobrindo se foi criado em uma sequencia
+criado_em_sequencia = in_sequence;
+
 //Metodo de atirar
 atirando = function()
 {
