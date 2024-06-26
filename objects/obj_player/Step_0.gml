@@ -26,7 +26,7 @@ if(keyboard_check_pressed(vk_add))
 	usa_escudo();
 }
 
-show_debug_message(timer_invencivel);
+//show_debug_message(timer_invencivel);
 
 #endregion
 
