@@ -3,7 +3,7 @@ vida = 10;
 
 //Variavel que controla meu estado
 estado = "chegando";
-tempo_carregando = game_get_speed(gamespeed_fps) *.5;
+tempo_carregando = game_get_speed(gamespeed_fps) *2;
 timer_carregando = 0;
 contador = 0;
 decidi_direcao = false;
@@ -110,5 +110,8 @@ morrendo = function()
 		//Se ficar sem vida se destroi e cria particula
 		instance_destroy();
 		instance_create_layer(x, y, "Particulas", obj_part_explosao_inimigo);
+		
+		//Se destruir treme a tela
+		screenshake(20);
 	}
 }

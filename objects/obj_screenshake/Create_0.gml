@@ -1,0 +1,2 @@
+//Variaveis
+treme = 0;

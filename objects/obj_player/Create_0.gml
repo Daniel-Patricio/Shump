@@ -155,10 +155,14 @@ perde_vida = function()
 		
 		//Avisando que o tempo de invencibilidade ta valendo
 		timer_invencivel = tempo_invencivel;
+		
+		screenshake(10);
 	}
 	else
 	{
 		instance_destroy();
+		
+		screenshake(50);
 	}
 	
 }
