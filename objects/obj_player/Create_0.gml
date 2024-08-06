@@ -26,6 +26,9 @@ meu_escudo = noone;
 tempo_invencivel = game_get_speed(gamespeed_fps);
 timer_invencivel = 0;
 
+//Variaveis para a escala
+inicia_efeito_mola();
+
 #endregion
 
 #region
@@ -68,6 +71,10 @@ controla_player = function()
 	//Criar um tiro quando apertar a tecla e o timer ta zerado
 	if(_atirar && timer_tiro <= 0)
 	{
+		
+		//Mudando o tamanho do player
+		efeito_mola(.8, 1.2);
+		
 		//Checa o lvl do tiro
 		if(level_tiro == 1)
 		{
@@ -95,7 +102,7 @@ tiro_1 = function()
 	var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player);
 		
 	//Fazendo o tiro ir pra frente
-	_tiro.vspeed = -10;
+	//_tiro.vspeed = -10;
 }
 
 //Metodo do tiro 2
@@ -103,9 +110,9 @@ tiro_2 = function()
 {
 	//Criando 2 tiros
 	var _tiro = instance_create_layer(x - 10, y, "Tiros", obj_tiro_player);
-	_tiro.vspeed = -10;
+	//_tiro.vspeed = -10;
 	_tiro = instance_create_layer(x + 10, y, "Tiros", obj_tiro_player);
-	_tiro.vspeed = -10;
+	//_tiro.vspeed = -10;
 }
 
 //Metodo do tiro 3
@@ -147,6 +154,9 @@ perde_vida = function()
 {
 	//Só pode perder vida se não estiver invencível
 	if (timer_invencivel > 0) return;
+	
+	//Toma dano fica achatado
+	efeito_mola(2, .5);
 	
 	//Perdendo vida se ainda tem vida
 	if(vidas > 0)

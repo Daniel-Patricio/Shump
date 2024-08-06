@@ -32,3 +32,5 @@ if(keyboard_check_pressed(vk_add))
 
 //Controlando o player
 controla_player();
+
+retorna_mola(.3);
