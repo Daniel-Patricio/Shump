@@ -34,3 +34,5 @@ if(keyboard_check_pressed(vk_add))
 controla_player();
 
 retorna_mola(.3);
+
+contador_efeito_branco();

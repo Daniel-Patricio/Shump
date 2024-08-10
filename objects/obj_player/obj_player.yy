@@ -28,7 +28,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"musica_fundo","filters":[
+        "GMSound",
+      ],"listItems":[],"multiselect":false,"name":"musica_fundo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"snd_musica","path":"sounds/snd_musica/snd_musica.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"snd_musica","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

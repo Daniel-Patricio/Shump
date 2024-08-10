@@ -6,5 +6,11 @@ varying vec4 v_vColour;
 
 void main()
 {
-    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+	//Pegando a sprite que esta sendo desenhada normalmente
+	vec4 cor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+	cor.rgb = vec3(1.0, 1.0, 1.0);
+	
+	
+	//Desenhando a sprite normalmente
+    gl_FragColor = cor;
 }

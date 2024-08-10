@@ -5,6 +5,8 @@ vida = 10;
 estado = "chegando";
 tempo_carregando = game_get_speed(gamespeed_fps) *2;
 timer_carregando = 0;
+inicia_efeito_mola();
+inicia_efeito_branco();
 contador = 0;
 decidi_direcao = false;
 
@@ -100,6 +102,10 @@ maquina_de_estado = function()
 
 morrendo = function()
 {
+	//Fazendo o efeito mola
+	efeito_mola(1.5, .5);
+	timer_efeito_branco(2);
+	
 	//Perder vida
 	if (vida > 1)
 	{

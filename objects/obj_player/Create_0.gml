@@ -1,3 +1,8 @@
+//Para de tocar todos os sons
+audio_stop_all();
+
+//Tocando a musica do jogo
+audio_play_sound(musica_fundo, 0, 1);
 
 #region variaveis
 
@@ -15,6 +20,8 @@ level_tiro = 1;
 
 //Vidas
 vidas = 3;
+
+inicia_efeito_branco();
 
 //Escudos
 escudos = 3;
@@ -157,6 +164,7 @@ perde_vida = function()
 	
 	//Toma dano fica achatado
 	efeito_mola(2, .5);
+	timer_efeito_branco(3);
 	
 	//Perdendo vida se ainda tem vida
 	if(vidas > 0)
