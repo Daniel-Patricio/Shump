@@ -39,8 +39,10 @@
   "name":"Shump",
   "resources":[
     {"id":{"name":"obj_escudo","path":"objects/obj_escudo/obj_escudo.yy",},},
+    {"id":{"name":"obj_explosao_jogador","path":"objects/obj_explosao_jogador/obj_explosao_jogador.yy",},},
     {"id":{"name":"obj_inimigo1","path":"objects/obj_inimigo1/obj_inimigo1.yy",},},
     {"id":{"name":"obj_inimigo3","path":"objects/obj_inimigo3/obj_inimigo3.yy",},},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_ondas","path":"objects/obj_ondas/obj_ondas.yy",},},
     {"id":{"name":"obj_part_explosao_inimigo","path":"objects/obj_part_explosao_inimigo/obj_part_explosao_inimigo.yy",},},
     {"id":{"name":"obj_part_tiro","path":"objects/obj_part_tiro/obj_part_tiro.yy",},},
@@ -73,6 +75,7 @@
     {"id":{"name":"spr_bg2","path":"sprites/spr_bg2/spr_bg2.yy",},},
     {"id":{"name":"spr_bg3","path":"sprites/spr_bg3/spr_bg3.yy",},},
     {"id":{"name":"spr_escudo","path":"sprites/spr_escudo/spr_escudo.yy",},},
+    {"id":{"name":"spr_explosao_player","path":"sprites/spr_explosao_player/spr_explosao_player.yy",},},
     {"id":{"name":"spr_fg","path":"sprites/spr_fg/spr_fg.yy",},},
     {"id":{"name":"spr_icone_escudo","path":"sprites/spr_icone_escudo/spr_icone_escudo.yy",},},
     {"id":{"name":"spr_icone_vida","path":"sprites/spr_icone_vida/spr_icone_vida.yy",},},
@@ -90,8 +93,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
+    {"roomId":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"roomId":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
   ],
   "templateType":"game",

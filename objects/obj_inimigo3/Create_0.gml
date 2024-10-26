@@ -45,6 +45,7 @@ maquina_de_estado = function()
 		//Usa o tiro A
 		case "atirando":
 		{
+			efeito_som(sfx_laser2, .1);
 			if (instance_exists(obj_player))
 			{
 				//Encontrando a direção do player
@@ -66,6 +67,7 @@ maquina_de_estado = function()
 		case "atirando2":
 		{
 			var _ang = 255;
+			efeito_som(sfx_laser2, .1);
 			//Repetir o tiro
 			repeat(3)
 			{
@@ -119,5 +121,8 @@ morrendo = function()
 		
 		//Se destruir treme a tela
 		screenshake(20);
+		
+		//Som da explosao
+		efeito_som(sfx_explosion, .1);
 	}
 }

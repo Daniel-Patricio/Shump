@@ -81,6 +81,8 @@ controla_player = function()
 		
 		//Mudando o tamanho do player
 		efeito_mola(.8, 1.2);
+		audio_stop_sound(sfx_laser1);
+		efeito_som(sfx_laser1, .1);
 		
 		//Checa o lvl do tiro
 		if(level_tiro == 1)
@@ -179,7 +181,7 @@ perde_vida = function()
 	else
 	{
 		instance_destroy();
-		
+		instance_create_layer(x, y, "Particulas", obj_explosao_jogador);
 		screenshake(50);
 	}
 	
@@ -192,6 +194,9 @@ usa_escudo = function()
 	{
 		//Decrementa o valor de escudos
 		escudos--;
+		
+		//ativando o escudo toca o som
+		efeito_som(sfx_shieldUp, 0);
 		
 		//Guardando o escudo criado
 		meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);

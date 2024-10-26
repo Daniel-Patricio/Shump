@@ -82,4 +82,11 @@ function desenha_efeito_branco(_funcao_desenho = draw_self)
 	}
 }
 
+function efeito_som(_som = sfx_laser1, _variacao = .1)
+{
+	var _pitch = random_range(1 - _variacao, 1 + _variacao);
+	
+	audio_play_sound(_som, 0, 0, , ,_pitch);
+}
+
 #endregion
