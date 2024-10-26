@@ -39,6 +39,7 @@
   "name":"Shump",
   "resources":[
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
+    {"id":{"name":"fnt_tutorial","path":"fonts/fnt_tutorial/fnt_tutorial.yy",},},
     {"id":{"name":"obj_escudo","path":"objects/obj_escudo/obj_escudo.yy",},},
     {"id":{"name":"obj_explosao_jogador","path":"objects/obj_explosao_jogador/obj_explosao_jogador.yy",},},
     {"id":{"name":"obj_inimigo1","path":"objects/obj_inimigo1/obj_inimigo1.yy",},},
@@ -54,6 +55,7 @@
     {"id":{"name":"obj_tiro_inimigo3a","path":"objects/obj_tiro_inimigo3a/obj_tiro_inimigo3a.yy",},},
     {"id":{"name":"obj_tiro_inimigo3b","path":"objects/obj_tiro_inimigo3b/obj_tiro_inimigo3b.yy",},},
     {"id":{"name":"obj_tiro_player","path":"objects/obj_tiro_player/obj_tiro_player.yy",},},
+    {"id":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},},
     {"id":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
     {"id":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
@@ -63,6 +65,7 @@
     {"id":{"name":"seq_onda2","path":"sequences/seq_onda2/seq_onda2.yy",},},
     {"id":{"name":"sq_transicao1","path":"sequences/sq_transicao1/sq_transicao1.yy",},},
     {"id":{"name":"sq_transicao2","path":"sequences/sq_transicao2/sq_transicao2.yy",},},
+    {"id":{"name":"sq_tutorial","path":"sequences/sq_tutorial/sq_tutorial.yy",},},
     {"id":{"name":"sh_branco","path":"shaders/sh_branco/sh_branco.yy",},},
     {"id":{"name":"sfx_explosion","path":"sounds/sfx_explosion/sfx_explosion.yy",},},
     {"id":{"name":"sfx_laser1","path":"sounds/sfx_laser1/sfx_laser1.yy",},},

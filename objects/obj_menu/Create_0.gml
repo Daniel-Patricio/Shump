@@ -47,10 +47,26 @@ ativa_menu = function()
 	{
 		//jogar
 		case 0:
+			//chamando a transicao1
+			layer_sequence_create("sq_transicao", room_width/2, room_height/2, sq_transicao1);
+			
+			//o destino é a tela do jogo
+			global.destino = rm_jogo;
+			
+			//esta começando a transicao
+			global.transicao = true;
 		break;
 		
 		//tutorial
 		case 1:
+			//chamando a transicao2
+			layer_sequence_create("sq_transicao", room_width/2, room_height/2, sq_transicao1);
+			
+			//o destino é a tela do jogo
+			global.destino = rm_tutorial;
+			
+			//esta começando a transicao
+			global.transicao = true;
 		break;
 		
 		//sair

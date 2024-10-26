@@ -4,6 +4,11 @@
 
 global.debug = false;
 
+//definindo o destino da transicao da room
+global.destino = rm_inicio;
+
+global.transicao = false;
+
 #endregion
 
 #region funções
@@ -87,6 +92,19 @@ function efeito_som(_som = sfx_laser1, _variacao = .1)
 	var _pitch = random_range(1 - _variacao, 1 + _variacao);
 	
 	audio_play_sound(_som, 0, 0, , ,_pitch);
+}
+
+function muda_room_transicao()
+{
+	room_goto(global.destino);
+	
+	//parando todos os sons
+	audio_stop_all();
+}
+
+function finaliza_transicao()
+{
+	global.transicao = false;
 }
 
 #endregion

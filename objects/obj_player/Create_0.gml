@@ -38,7 +38,7 @@ inicia_efeito_mola();
 
 #endregion
 
-#region
+#region funcoes
 
 //Metodo para controlar o player
 controla_player = function()
@@ -183,6 +183,9 @@ perde_vida = function()
 		instance_destroy();
 		instance_create_layer(x, y, "Particulas", obj_explosao_jogador);
 		screenshake(50);
+		
+		//cria transicao para voltar para o menu inicial
+		layer_sequence_create("sq_transicao", x, y, sq_transicao1);
 	}
 	
 }
@@ -221,3 +224,9 @@ com_escudo = function()
 }
 
 #endregion
+
+//cria transicao na posicao do player
+layer_sequence_create("sq_transicao", x, y, sq_transicao2);
+
+//avisa que o destino é a rm inicial
+global.destino = rm_inicio;
