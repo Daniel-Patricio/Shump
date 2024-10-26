@@ -186,6 +186,7 @@ perde_vida = function()
 		
 		//cria transicao para voltar para o menu inicial
 		layer_sequence_create("sq_transicao", x, y, sq_transicao1);
+		global.transicao = true;
 	}
 	
 }

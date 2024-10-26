@@ -4,6 +4,9 @@ if (global.debug)
 	draw_text(20, 20, "Level tiro: " + string(level_tiro));
 }
 
+//so desenha se nao ta tendo transicao
+if (global.transicao) exit;
+
 //Pega a altura da tela
 var _gui_height = display_get_gui_height();
 
